@@ -12,6 +12,7 @@ export default [
   {
     rules: {
       'capitalized-comments': ['error', 'always'],
+      'react/prop-types': 'off',
     },
   },
 ];
