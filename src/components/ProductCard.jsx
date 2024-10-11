@@ -15,7 +15,7 @@ export default function ProductCard({ product }) {
         </button>
         <p className="text4 rose500">{product.category}</p>
         <p className="text3 rose900">{product.name}</p>
-        <p className="text3 red">${product.price}</p>
+        <p className="text3 red">${product.price.toFixed(2)}</p>
       </li>
     </>
   );
