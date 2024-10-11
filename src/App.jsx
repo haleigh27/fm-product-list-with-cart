@@ -2,10 +2,11 @@ import React from 'react';
 
 import ProductList from './components/ProductList';
 import Cart from './components/Cart';
+import { CartContextProvider } from './store/cartContext.jsx';
 
 function App() {
   return (
-    <>
+    <CartContextProvider>
       <div className="main-container">
         <div>
           <header>
@@ -15,7 +16,7 @@ function App() {
         </div>
         <Cart />
       </div>
-    </>
+    </CartContextProvider>
   );
 }
 
