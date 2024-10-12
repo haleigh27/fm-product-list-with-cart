@@ -1,8 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef } from 'react';
 import CartContext from '../store/cartContext';
+import Modal from './Modal';
 
 export default function Cart() {
   const cartCtx = useContext(CartContext);
+  const dialogRef = useRef(null);
+
+  const handleOpenModal = () => {
+    dialogRef.current?.showModal();
+  };
+
+  const handleOrderConfirmation = () => {
+    dialogRef.current?.close();
+    cartCtx.clearCart();
+  };
 
   const totalCartProducts = cartCtx.products.reduce(
     (totalNumberOfProducts, products) => {
@@ -74,9 +85,13 @@ export default function Cart() {
               <span className="text4-bold rose900">carbon-neutral</span>delivery
             </p>
           </div>
-          <button className="confirm-order-btn text3">Confirm Order</button>
+          <button className="confirm-order-btn text3" onClick={handleOpenModal}>
+            Confirm Order
+          </button>
         </>
       )}
+      {/* Confirmation Modal */}
+      <Modal ref={dialogRef} onClose={handleOrderConfirmation} />
     </aside>
   );
 }
