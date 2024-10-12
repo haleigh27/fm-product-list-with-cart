@@ -61,10 +61,7 @@ export default function Cart() {
                       </p>
                     </div>
                   </div>
-                  <button
-                    className="remove-item-btn"
-                    onClick={() => cartCtx.removeProduct(product.name)}
-                  >
+                  <button onClick={() => cartCtx.removeProduct(product.name)}>
                     <img
                       src="/public/images/icon-remove-item.svg"
                       alt="Remove Item"

@@ -37,7 +37,7 @@ export default function ProductCard({ product }) {
         </div>
       ) : (
         <button
-          className="add-to-cart-btn"
+          className="add-to-cart-btn empty"
           onClick={() => cartCtx.addProduct(product)}
         >
           <img src="/images/icon-add-to-cart.svg" alt="" />
