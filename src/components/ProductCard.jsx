@@ -14,23 +14,41 @@ export default function ProductCard({ product }) {
         <img src={product.image.mobile} alt={product.name} />
       </picture>
       {productInCart ? (
-        <div>
-          <button onClick={() => cartCtx.decreaseProductQuantity(product.name)}>
-            -
+        <div className="add-to-cart-btn quantity">
+          <button
+            className="quantity-btn"
+            onClick={() => cartCtx.decreaseProductQuantity(product.name)}
+          >
+            <img
+              src="/public/images/icon-decrement-quantity.svg"
+              alt="Decrease quantity"
+            />
           </button>
-          <span>{productInCart.quantity}</span>
-          <button onClick={() => cartCtx.addProduct(product)}>+</button>
+          <span className="text4-bold">{productInCart.quantity}</span>
+          <button
+            className="quantity-btn"
+            onClick={() => cartCtx.addProduct(product)}
+          >
+            <img
+              src="/public/images/icon-increment-quantity.svg"
+              alt="Increase quantity"
+            />
+          </button>
         </div>
       ) : (
-        <button onClick={() => cartCtx.addProduct(product)}>
+        <button
+          className="add-to-cart-btn"
+          onClick={() => cartCtx.addProduct(product)}
+        >
           <img src="/images/icon-add-to-cart.svg" alt="" />
           <p className="text4-bold">Add to Cart</p>
         </button>
       )}
-
-      <p className="text4 rose500">{product.category}</p>
-      <p className="text3 rose900">{product.name}</p>
-      <p className="text3 red">${product.price.toFixed(2)}</p>
+      <div className="product-cart--item-details">
+        <p className="text4 rose500">{product.category}</p>
+        <p className="text3 rose900">{product.name}</p>
+        <p className="text3 red">${product.price.toFixed(2)}</p>
+      </div>
     </li>
   );
 }
