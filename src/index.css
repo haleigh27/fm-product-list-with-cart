@@ -360,13 +360,14 @@ dialog {
   padding: 0;
   border: 0;
   border-radius: 8px;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
   max-width: 100%;
 }
+
 .confirmation-modal {
   padding: 40px 24px 24px 24px;
 }
