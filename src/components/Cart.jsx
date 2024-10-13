@@ -35,7 +35,7 @@ export default function Cart() {
       {cartCtx.products.length === 0 ? (
         <div className="center">
           <img
-            src="/images/illustration-empty-cart.svg"
+            src="./images/illustration-empty-cart.svg"
             alt=""
             className="center"
           />
@@ -63,7 +63,7 @@ export default function Cart() {
                   </div>
                   <button onClick={() => cartCtx.removeProduct(product.name)}>
                     <img
-                      src="/public/images/icon-remove-item.svg"
+                      src="./images/icon-remove-item.svg"
                       alt="Remove Item"
                     />
                   </button>
@@ -76,7 +76,7 @@ export default function Cart() {
             <p className="text2 rose900">${totalPrice.toFixed(2)}</p>
           </div>
           <div className="carbon-free">
-            <img src="/public/images/icon-carbon-neutral.svg" alt="" />
+            <img src="./images/icon-carbon-neutral.svg" alt="" />
             <p className=" text4 rose900">
               This is a{' '}
               <span className="text4-bold rose900">carbon-neutral</span>delivery

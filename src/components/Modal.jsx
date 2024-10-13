@@ -16,7 +16,7 @@ const Modal = forwardRef(function Modal({ onClose }, ref) {
       <div className="confirmation-modal">
         <img
           className="tick-image"
-          src="/public/images/icon-order-confirmed.svg"
+          src="./images/icon-order-confirmed.svg"
           alt=""
         />
         <h2 className="text1 rose900">Order Confirmed</h2>

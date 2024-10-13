@@ -20,7 +20,7 @@ export default function ProductCard({ product }) {
             onClick={() => cartCtx.decreaseProductQuantity(product.name)}
           >
             <img
-              src="/public/images/icon-decrement-quantity.svg"
+              src="./images/icon-decrement-quantity.svg"
               alt="Decrease quantity"
             />
           </button>
@@ -30,7 +30,7 @@ export default function ProductCard({ product }) {
             onClick={() => cartCtx.addProduct(product)}
           >
             <img
-              src="/public/images/icon-increment-quantity.svg"
+              src="./images/icon-increment-quantity.svg"
               alt="Increase quantity"
             />
           </button>
@@ -40,7 +40,7 @@ export default function ProductCard({ product }) {
           className="add-to-cart-btn empty"
           onClick={() => cartCtx.addProduct(product)}
         >
-          <img src="/images/icon-add-to-cart.svg" alt="" />
+          <img src="./images/icon-add-to-cart.svg" alt="" />
           <p className="text4-bold">Add to Cart</p>
         </button>
       )}
