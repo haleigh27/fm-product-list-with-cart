@@ -200,6 +200,10 @@ picture img {
   border-radius: 16px;
 }
 
+.img-border {
+  border: 2px solid var(--clr-red);
+}
+
 .center {
   margin: auto;
 }

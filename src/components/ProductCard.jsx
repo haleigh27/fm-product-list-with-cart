@@ -11,7 +11,11 @@ export default function ProductCard({ product }) {
       <picture>
         <source media="(min-width: 1024px)" srcSet={product.image.desktop} />
         <source media="(min-width: 768px)" srcSet={product.image.tablet} />
-        <img src={product.image.mobile} alt={product.name} />
+        <img
+          src={product.image.mobile}
+          alt={product.name}
+          className={productInCart ? 'img-border' : ''}
+        />
       </picture>
       {productInCart ? (
         <div className="add-to-cart-btn quantity">
